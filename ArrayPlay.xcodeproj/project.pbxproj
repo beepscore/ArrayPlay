@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1318A014DE619300CF070A /* ViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE13189F14DE619300CF070A /* ViewControllerTests.m */; };
 		DE9A608714DE2072009EF290 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9A608614DE2072009EF290 /* UIKit.framework */; };
 		DE9A608914DE2072009EF290 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9A608814DE2072009EF290 /* Foundation.framework */; };
 		DE9A608B14DE2072009EF290 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9A608A14DE2072009EF290 /* CoreGraphics.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE13189E14DE619300CF070A /* ViewControllerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTests.h; sourceTree = "<group>"; };
+		DE13189F14DE619300CF070A /* ViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTests.m; sourceTree = "<group>"; };
 		DE9A608214DE2072009EF290 /* ArrayPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArrayPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9A608614DE2072009EF290 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE9A608814DE2072009EF290 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -147,9 +150,11 @@
 		DE9A60AD14DE2072009EF290 /* ArrayPlayTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE9A60AE14DE2072009EF290 /* Supporting Files */,
 				DED2D25614DE56F8007DBE42 /* ArrayModelTests.h */,
 				DED2D25714DE56F8007DBE42 /* ArrayModelTests.m */,
-				DE9A60AE14DE2072009EF290 /* Supporting Files */,
+				DE13189E14DE619300CF070A /* ViewControllerTests.h */,
+				DE13189F14DE619300CF070A /* ViewControllerTests.m */,
 			);
 			path = ArrayPlayTests;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED2D25814DE56F8007DBE42 /* ArrayModelTests.m in Sources */,
+				DE1318A014DE619300CF070A /* ViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

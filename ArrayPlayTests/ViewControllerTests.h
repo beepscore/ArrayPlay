@@ -1,5 +1,5 @@
 //
-//  ArrayModelTests.h
+//  ViewControllerTests.h
 //  ArrayPlay
 //
 //  Created by Steve Baker on 2/4/12.
@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface ArrayModelTests : SenTestCase
+@interface ViewControllerTests : SenTestCase
 
 @end
