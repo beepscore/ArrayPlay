@@ -30,17 +30,30 @@
     
     ArrayModel *testArrayModel = [[ArrayModel alloc] init];
     
-    NSNumber *testNumber = [NSNumber numberWithInt:65];
-    // numbers 0-12 are singletons??
+    NSNumber *testNumber = [NSNumber numberWithInteger:65];
+    // aside: NSNumbers 0-12 are singletons??
     // http://stackoverflow.com/questions/4270121/why-nsnumber-points-to-the-same-address-when-value-are-equals
-    NSLog(@"&testNumber = %llu", &testNumber);
+
+    NSLog(@"testNumber value : %i", [testNumber integerValue]);
+    // compiler warns "Conversion specifies type 'unsigned long long' but the argument has type 'NSNumber'"
+    NSLog(@"testNumber address : %llu", testNumber);
+    // this doesn't print value correctly. Prints value : 0 or 256?
+    NSLog(@"testNumber address : %llu , value : %i", testNumber, [testNumber integerValue]);
+    // This log shows the value is still 65
+    NSLog(@"testNumber value : %i", [testNumber integerValue]);
+    STAssertEquals(65, [testNumber integerValue], nil);
+    
+    // [testArrayModel.myArray objectAtIndex:0] to value of pointer variable testNumber
     testArrayModel.myArray = [NSArray arrayWithObject:testNumber];
     
-    // change testNumber to point to a new object at a different address
-    testNumber = [NSNumber numberWithInt:66];
-    NSLog(@"&testNumber = %llu", &testNumber);
+    // assign testNumber to point to another object at a different address
+    testNumber = [NSNumber numberWithInteger:66];
+    NSLog(@"testNumber value : %i", [testNumber integerValue]);
+    // compiler warns "Conversion specifies type 'unsigned long long' but the argument has type 'NSNumber'"
+    NSLog(@"testNumber address : %llu", testNumber);
+
     // [testArrayModel.myArray objectAtIndex:0] still points to the original NSNumber
-    NSNumber *expectedNumber = [NSNumber numberWithInt:65];
+    NSNumber *expectedNumber = [NSNumber numberWithInteger:65];
     NSNumber *actualNumber = [testArrayModel.myArray objectAtIndex:0];
 
     // uses isEqualTo: to test objects
