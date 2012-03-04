@@ -213,7 +213,7 @@
 		DE9A607914DE2072009EF290 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Beepscore LLC";
 			};
 			buildConfigurationList = DE9A607C14DE2072009EF290 /* Build configuration list for PBXProject "ArrayPlay" */;
